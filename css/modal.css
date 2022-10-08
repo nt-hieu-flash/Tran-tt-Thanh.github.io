@@ -1,0 +1,88 @@
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 35px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.655);
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #d1b295;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    height: 650px;
+    text-align: center;
+  }
+  .modalSlides {
+    display: none;
+    height: 600px;
+  }
+  .row {
+    display: flex;
+    background-color: #F1DECC;
+    border-top: solid black 3px;
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Create four equal columns that floats next to eachother */
+  .column {
+    width: 250px;
+    margin:25px;
+    height: 200px;
+  }
+  
+  .prev-modal,
+.next-modal {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  color: black;
+  font-weight: bold;
+  font-size: 24px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  margin-left:-570px;
+}
+
+/* Position the "next button" to the right */
+.next-modal {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+  margin-right: 30px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev-modal:hover,
+.next-modal:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.numbertextModal{
+    position: absolute;
+    font-size: 32px;
+}
+#caption{
+    font-size: 32px;
+    font-family: 'Montserrat';
+    margin: 0px;
+    width: 100%;
+    position: relative;
+    color: black;
+}
+.demo {
+  cursor: pointer;
+}

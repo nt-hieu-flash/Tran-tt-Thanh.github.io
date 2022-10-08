@@ -1,0 +1,269 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css" />
+    <link rel="stylesheet" href="./css/animate.css" type="text/css">
+</head>
+
+<body>
+
+    <div class="banner">
+        <div class="hello wow tada">
+            <h1 id="hello">
+                Hello !<br />
+            </h1>
+            <h2 id="welcome">Welcome to my portfolio</h2>
+        </div>
+        <div class="slide-wrapper">
+            <div class="slide"><img src="./image/banner1.png"></div>
+            <div class="slide"><img src="./image/banner2.png"></div>
+            <div class="slide"><img src="./image/banner3.png"></div>
+        </div>
+    </div>
+
+    <div class="empty"></div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top" class="to-top"></button>
+    <section class="container1" id="section1">
+        <img src="./image/avatar.png" class="wow zoomIn">
+        <div class="content wow backInRight">
+            <h2 id="content-hello">
+                HELLO!<br />
+                I'M THANH <br />
+                <span id="slide-skill" class="typewrite" data-period="2000"
+                    data-type='["WEB DESIGNER", "GRAPHIC DESIGNER", "APP DESIGNER", "FRONT-END DEVELOPER"]'></span>
+            </h2>
+            <button class="hire-btn">Hire Me</button>
+            <a href="#section5"><button class="contact-btn">Contact Me</button></a>
+        </div>
+    </section>
+    <section class="container2" id="section2">
+        <div class="container2-img wow zoomInDown">
+            <img id="img1" src="./image/img1.png">
+            <img id="logo1" src="./image/logo1.png">
+            <img id="logo2" src="./image/logo2.png">
+            <img id="logo3" src="./image/logo3.png">
+        </div>
+        <div class="content">
+            <div class="line"></div>
+            <h2>learn about me ?</h2>
+            <h1>This is my skill</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis
+                ornare velit non vulputate. Aliquam metus tortor, auctor id gravida</p>
+            <li id="li-design" class="wow flipInX">web design</li>
+            <div class="container-skill wow flipInX">
+                <div class="skill web-design"></div>
+            </div>
+            <li class="wow flipInX">graphic design</li>
+            <div class="container-skill wow flipInX">
+                <div class="skill graphic-design"></div>
+            </div>
+            <li class="wow flipInX">app design</li>
+            <div class="container-skill wow flipInX">
+                <div class="skill app-design"></div>
+            </div>
+            <li class="wow flipInX">front-end developer</li>
+            <div class="container-skill wow flipInX">
+                <div class="skill front-end-developer"></div>
+            </div>
+        </div>
+    </section>
+    <section class="container3" id="section3">
+        <div class="slideshow-container wow headShake">
+            <div class="mySlides">
+                <div class="numbertext">1 / 4</div>
+                <img src="./image/img2.png" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                <div class="overlay">Rộp Rộp Brand</div>
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">2 / 4</div>
+                <img src="./image/img3.png" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+                <div class="overlay">Poster Gongcha</div>
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">3 / 4</div>
+                <img src="./image/img4.png" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+                <div class="overlay">Tea Pakeching</div>
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">4 / 4</div>
+                <img src="./image/img5.png" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+                <div class="overlay">Poster</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+                <div class="modalSlides">
+                    <div class="numbertextModal">1 / 4</div>
+                    <img src="./image/img2.png" style="width:593px">
+                </div>
+
+                <div class="modalSlides">
+                    <div class="numbertextModal">2 / 4</div>
+                    <img src="./image/img3.png" style="width:593px">
+                </div>
+
+                <div class="modalSlides">
+                    <div class="numbertextModal">3 / 4</div>
+                    <img src="./image/img4.png" style=" width:593px">
+                </div>
+
+                <div class="modalSlides">
+                    <div class="numbertextModal">4 / 4</div>
+                    <img src="./image/img5.png" style="width:593px">
+                </div>
+
+                <!-- Next/previous controls -->
+                <a class="prev-modal" onclick="plusSlidesModal(-1)">Prev</a>
+                <a class="next-modal" onclick="plusSlidesModal(1)">Next</a>
+
+                <!-- Caption text -->
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+
+                <!-- Thumbnail image controls -->
+                <div class="row">
+                    <div class="column" style="margin-left: 90px">
+                        <img class="demo" src="./image/img2.png" style="width: 80%" onclick="currentSlide(1)"
+                            alt="Rộp Rộp Brand">
+                    </div>
+
+                    <div class="column">
+                        <img class="demo" src="./image/img3.png" style="width: 80%" onclick="currentSlide(2)"
+                            alt="Poster Gongcha">
+                    </div>
+
+                    <div class="column">
+                        <img class="demo" src="./image/img4.png" style="width: 80%" onclick="currentSlide(3)"
+                            alt="Tea Pakeching">
+                    </div>
+
+                    <div class="column">
+                        <img class="demo" src="./image/img5.png" style="width: 80%" onclick="currentSlide(4)"
+                            alt="Poster">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="line"></div>
+            <h2>What i do ?</h2>
+            <h1>This is what i did</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis
+                ornare velit non vulputate. Aliquam metus tortor, auctor id gravida</p>
+            <h1 style="width: 666px">I make those designs with the following software</h1>
+            <div class="logo-skill">
+                <img src="./image/logo4.png" class="wow jello">
+                <img src="./image/logo5.png" class="wow jello">
+                <img src="./image/logo6.png" class="wow jello">
+            </div>
+        </div>
+
+    </section>
+    <section class="container4" id="section4">
+        <div class="review-content">
+            <div class="review-child wow slideInLeft animation-delay: 0.5s">
+                <img src="./image/avatar1.png">
+                <div class="talkbubble-right">
+                    <h2>Nguyễn Ngọc Gia Minh</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur
+                        facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida</p>
+                </div>
+            </div>
+            <div class="review-child second wow slideInRight animation-delay: 1s">
+                <div class="talkbubble-left">
+                    <h2>Trần Minh Trân</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur
+                        facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida</p>
+                </div>
+                <img src="./image/avatar2.png">
+            </div>
+            <div class="review-child second wow slideInLeft animation-delay: 1.5s;">
+                <img src="./image/avatar3.png">
+                <div class="talkbubble-right">
+                    <h2>Alex Camelia</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur
+                        facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida</p>
+                </div>
+            </div>
+            <div class="review-child second wow slideInRight animation-delay: 2s;">
+                <div class="talkbubble-left">
+                    <h2>Park Min Yoonyoon</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur
+                        facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida</p>
+                </div>
+                <img src="./image/avatar4.png">
+            </div>
+        </div>
+        <div class="content">
+            <div class="line"></div>
+            <h2>What they said ?</h2>
+            <h1>This is some review</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis
+                ornare velit non vulputate. Aliquam metus tortor, auctor id gravida</p>
+        </div>
+    </section>
+    <section class="container5" id="section5">
+        <div class="form">
+            <h1 class="wow heartBeat">Let's get in touch</h1>
+            <input type="text" placeholder="Your gmail *" id="gmail">
+            <input type="text" placeholder="Your phone *" id="phone">
+            <textarea placeholder="Your message *" id="message"></textarea>
+        </div>
+        <div class="content">
+            <div class="line"></div>
+            <h2>How to contact me ?</h2>
+            <h1>Here's how to <br /> contact me</h1>
+            <div class="content-child">
+                <img src="./image/logo7.png">
+                <h3>Address</h3>
+            </div>
+            <p>1234.abc.def</p>
+            <div class="content-child">
+                <img src="./image/logo8.png">
+                <h3>Mail</h3>
+            </div>
+            <p>abc.def@gmail.com</p>
+            <div class="content-child">
+                <img src="./image/logo9.png">
+                <h3>Phone</h3>
+            </div>
+            <p>123456789123456789</p>
+        </div>
+
+    </section>
+    <div class="container-nav">
+        <nav class="nav">
+            <ul>
+                <li class="links"> <a id="n2" href="#section2">About me</a></li>
+                <li class="links"> <a id="n3" href="#section3">My work</a></li>
+                <li class="links" style="margin-top: 0px !important"> <a id="n1" href="#section1">Hello</a></li>
+                <li class="links"> <a id="n4" href="#section4">Review</a></li>
+                <li class="links"> <a id="n5" href="#section5">Contact Me</a></li>
+            </ul>
+        </nav>
+    </div>
+    <script src="./js/type.js"></script>
+    <script src="./js/slides.js"></script>
+    <script src="./js/jquery-3.6.1.min.js"></script>
+    <script src="./js/navActive.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src='https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js'></script>
+    <script> new WOW().init(); </script>
+    <script src="./js/toTop.js"></script>
+
+</html>
